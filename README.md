@@ -2,7 +2,7 @@
 
 Pytest-xdist can obsure some leaky state issues in our tests. This repo explores some potential issues you can run into, and some solutions we may want to explore.
 
-# Install
+## Install
 
 1. Create a virtual environment
 2. Install dependencies from the requirements file
@@ -12,3 +12,8 @@ Pytest-xdist can obsure some leaky state issues in our tests. This repo explores
 6. Now, repeat step 4, but uncomment out the forked decorators in `test_foo_bar_a.py`
 7. Repeat step 5.
 8. Observe, the state issues appear to be resolved.
+
+## Bonus
+
+Explore different `--dist` options, such as loadfile, loadgroup, etc.
+
