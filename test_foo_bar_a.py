@@ -1,16 +1,19 @@
-import pytest
+import unittest
 from test import test_dictionary
 
 # @pytest.mark.forked
-class TestFooBarA:
+class TestFooBarA(unittest.TestCase):
 	def test_foo_bar(self):
-		assert test_dictionary["foo"] == "bar"
+		self.assertEqual(test_dictionary["foo"], "bar")
 		test_dictionary["foo"] = "Oh no!"
 
 # @pytest.mark.forked
-class TestFooBarB:
+class TestFooBarB(unittest.TestCase):
 	def test_oh_no(self):
 		# This should fail because test dictionary = "ohno"
-		assert test_dictionary["foo"] == "bar"
+		assertEqual(test_dictionary["foo"], "bar")
 		test_dictionary["foo"] = "Heck yeah"
 
+
+if __name__ == '__main__':
+    unittest.main()
