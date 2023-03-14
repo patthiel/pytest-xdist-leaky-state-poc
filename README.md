@@ -17,3 +17,28 @@ Pytest-xdist can obsure some leaky state issues in our tests. This repo explores
 
 Explore different `--dist` options, such as loadfile, loadgroup, etc.
 
+Try with Python's Built in Unittest library
+
+
+## Interesting Reading
+
+Unittest: "Test cases not garbage collected after run"
+
+https://bugs.python.org/issue11798
+
+Unittest needs an option to call gc.collect() after each test
+https://bugs.python.org/issue17908
+
+Pytest Monitor: A plugin for analyzing resource usage during test sessions
+https://github.com/CFMTech/pytest-monitor
+
+
+Pytest Docs:
+
+
+Garbage Collection Not called between Parametrized tests
+https://github.com/pytest-dev/pytest/discussions/8153
+
+Cache, Re-running failures  and Maintaining State Between Tests:
+https://docs.pytest.org/en/7.1.x/how-to/cache.html
+ 
